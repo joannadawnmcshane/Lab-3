@@ -2,7 +2,21 @@
 
 long calculate_factorial(int number )
 {
-    // TODO: write your code here
+    //Check for invalid input
+    if (number < 0 || number > 20)
+    {
+        return -1;
+    }
+    long factorial = 1;
+    
+    // Calculate n × (n-1) × (n-2) × ... × 2 × 1
+    for (int i = number; i >= 1; i--)
+    {
+        factorial = factorial * i;
+    }
+
+    return factorial;
+
 }
 
 // DO NOT change the code below
